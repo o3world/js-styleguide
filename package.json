@@ -1,25 +1,4 @@
 {
-  "name": "js-styleguide",
-  "version": "1.0.0",
-  "description": "A guide to writing and linting JavaScript.",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .; exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/o3world/js-styleguide.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/o3world/js-styleguide/issues"
-  },
-  "homepage": "https://github.com/o3world/js-styleguide#readme"
-}
-
-
-{
   "name": "eslint-config-o3-world",
   "version": "1.0.0",
   "description": "A guide to writing and linting JavaScript.",
@@ -37,7 +16,7 @@
     "url": "https://github.com/o3world/js-styleguide/issues"
   },
   "homepage": "https://github.com/o3world/js-styleguide#readme",
-  "peerDependencies": {
+  "dependencies": {
     "eslint-config-airbnb-base": "^11.1.1"
   },
   "engines": {
