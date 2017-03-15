@@ -15,7 +15,7 @@ module.exports = {
     "guard-for-in": "off",
     "max-len": "warn",
     "keyword-spacing": "warn",
-    "no-console": "off",
+    "no-console": "warn",
     "no-multiple-empty-lines": "warn",
     "no-param-reassign": ["error", { "props": false }],
     "no-restricted-syntax": "warn",
