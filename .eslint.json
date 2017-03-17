@@ -1,8 +1,5 @@
 {
   "extends": "airbnb-base",
-  "plugins": [
-      "import"
-  ],
   "env": {
     "browser": true,
     "jquery": true,
@@ -10,22 +7,42 @@
     "mocha": true
   },
   "globals": {
-    "angular": true,
-    "inject": true,
-    "Base64": true
+    "angular": true
   },
   "rules": {
-    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
-    "func-names": "off",
-    "no-console": "off",
-    "max-len": "warn",
-    "no-tabs": "off",
-    "guard-for-in": "off",
     "eol-last": "off",
-    "no-restricted-syntax": "warn",
-    "no-multiple-empty-lines": "warn",
-    "no-use-before-define": "warn",
+    "func-names": "off",
+    "guard-for-in": "off",
     "keyword-spacing": "warn",
-    "no-param-reassign": ["error", { "props": false }]
+    "max-len": [
+      "error", {
+        "ignorePattern": "^(function|.factory|.service|.controller|.config|.run|.filter|.component|contstructor)"
+      }
+    ],
+    "no-console": "warn",
+    "no-multiple-empty-lines": [
+      "error", {
+        "max": 4,
+        "maxEOF": 2
+      }
+    ],
+    "no-param-reassign": [
+      "error", {
+        "props": false
+      }
+    ],
+    "no-restricted-syntax": "warn",
+    "no-trailing-spaces": [
+      "error", {
+        "skipBlankLines": true
+      }
+    ],
+    "no-use-before-define": [
+      "error", {
+        "functions": false,
+        "classes": false
+      }
+    ],
+    "padded-blocks": "off"
   }
 }
