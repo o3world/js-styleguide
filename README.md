@@ -10,17 +10,7 @@ A guide to writing and linting JavaScript.
 
   `npm install git+https://github.com/o3world/js-styleguide.git --save-dev`
 
-2. install peer dependencies for `eslint-config-airbnb-base` package ([more explanation here](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base#eslint-config-airbnb-base-1))
-
-  ```sh
-   (
-     export PKG=eslint-config-airbnb-base;
-     npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
-   )
-   ```
-
-
- 3. add `.eslint.json` file in project root and extend `o3-world`,
+2. add `.eslintrc.json` file in project root and extend `o3-world`,
 
  ```
  {
@@ -36,17 +26,17 @@ JavaScript written by O3 World developers should aim to adhere to the [Airbnb St
 As we transition towards this stricter set of rules, O3's eslint config has been setup as a subset of the Airbnb rules, with some of the more strict rules turned off, and others switched from errors to warnings:
 
 - Turned off:
-  - "eol-last"
-  - "func-names"
-  - "guard-for-in"
-  - "no-tabs"
+  - [eol-last](https://github.com/airbnb/javascript#whitespace--newline-at-end)
+  - [func-names](http://eslint.org/docs/rules/func-names)
+  - [guard-for-in](http://eslint.org/docs/rules/guard-for-in)
+  - [no-tabs](http://eslint.org/docs/rules/no-tabs)
 - Switched to warning:
-  - "max-len"
-  - "keyword-spacing"
-  - "no-console"
-  - "no-multiple-empty-lines"
-  - "no-restricted-syntax",
-  - "no-use-before-define"
+  - [keyword-spacing](https://github.com/airbnb/javascript#whitespace--around-keywords)
+  - [no-console](http://eslint.org/docs/rules/no-console)
+  - [no-restricted-syntax](https://github.com/airbnb/javascript#iterators--nope),
 - Modified
-  - "no-trailing-spaces" (can skip blank lines)
-  - "no-param-reassign" (allow param property reassign)
+  - [max-len](https://github.com/airbnb/javascript#whitespace--max-len) - allow longer lines for function params or angular module methods (.component, .service, etc)
+  - [no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines) - modified to allow up to 4 empty lines
+  - [no-param-reassign](https://github.com/airbnb/javascript#functions--mutate-params) - allow param property reassign
+  - [no-trailing-spaces](http://eslint.org/docs/rules/no-trailing-spaces) - empty lines can have trailing spaces (IDEs often do this by default after a return)
+  - [no-use-before-define](http://eslint.org/docs/rules/no-use-before-define) - allow function and class use before define
