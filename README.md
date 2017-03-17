@@ -3,9 +3,12 @@
 A guide to writing and linting JavaScript.
 
 ## Tools
-[eslint](https://github.com/eslint/eslint)
+- [ESLint](http://eslint.org/)
+- Node +4
+- npm
 
-## Installing O3 World Eslint Config
+
+## Installing O3 World ESLint Config
 1. install package (must have ssh setup and repo read access)
 
   `npm install git+https://github.com/o3world/js-styleguide.git --save-dev`
@@ -44,3 +47,69 @@ As we transition towards this stricter set of rules, O3's eslint config has been
   - [no-param-reassign](https://github.com/airbnb/javascript#functions--mutate-params) - allow param property reassign
   - [no-trailing-spaces](http://eslint.org/docs/rules/no-trailing-spaces) - empty lines can have trailing spaces (IDEs often do this by default after a return)
   - [no-use-before-define](http://eslint.org/docs/rules/no-use-before-define) - allow function and class use before define
+
+
+## Usage
+
+### Package.json
+
+Add script to your project's package.json, using ESLints [Command Line Interface](http://eslint.org/docs/user-guide/command-line-interface)
+
+example package.json:
+```
+{
+  "name": "example-site",
+  "version": "0.0.1",
+  "scripts": {
+    "lint": "eslint js/**; exit 0"
+  }
+```
+then in your terminal:
+```
+npm run lint
+```
+
+### Gulp
+
+[gulp-eslint](https://github.com/adametry/gulp-eslint)
+
+```
+npm install gulp-eslint
+```
+```
+const eslint = require('gulp-eslint');
+
+gulp.task('lint', () => {
+  return gulp.src(['**/*.js','!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+```
+[More detailed examples and documentation](https://github.com/adametry/gulp-eslint#usage)
+
+### Webpack
+
+```
+npm install eslint-loader --save-dev
+```
+
+In your webpack config
+```
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          // eslint options (if necessary)
+        }
+      },
+    ],
+  },
+  // ...
+}
+```
+[More detailed examples and documentation](https://github.com/MoOx/eslint-loader#eslint-loader-)
