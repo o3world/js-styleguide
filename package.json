@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/o3world/js-styleguide.git"
   },
-  "author": "",
+  "author": "O3 World (http://o3world.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/o3world/js-styleguide/issues"
