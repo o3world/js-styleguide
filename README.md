@@ -1,6 +1,6 @@
 # O3 World JavaScript Style Guide
 
-A guide to writing and linting JavaScript.
+A guide to writing and linting ES6+ JavaScript.
 
 ## Tools
 - [ESLint](http://eslint.org/)
