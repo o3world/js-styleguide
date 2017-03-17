@@ -19,7 +19,6 @@ module.exports = {
     "no-multiple-empty-lines": ["error", { "max": 4, "maxEOF": 2 }],
     "no-param-reassign": ["error", { "props": false }],
     "no-restricted-syntax": "warn",
-    "no-tabs": "off",
     "no-trailing-spaces": ["error", { "skipBlankLines": true }],
     "no-use-before-define": ["error", { "functions": false, "classes": false } ],
     "padded-blocks": "off"

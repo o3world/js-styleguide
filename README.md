@@ -12,10 +12,15 @@ A guide to writing and linting JavaScript.
 
 2. add `.eslintrc.json` file in project root and extend `o3-world`,
 
+
+Example .eslintrc.json file file which switches to using tabs:
  ```
  {
    "extends": "o3-world",
-   ... project specific config here
+   rules: {
+     "tab-tabs": "off",
+     "indent": ["error", "tab"]
+   }
  }
  ```
 
@@ -23,17 +28,16 @@ A guide to writing and linting JavaScript.
 ## Rules
 JavaScript written by O3 World developers should aim to adhere to the [Airbnb Styleguide](https://github.com/airbnb/javascript).
 
-As we transition towards this stricter set of rules, O3's eslint config has been setup as a subset of the Airbnb rules, with some of the more strict rules turned off, and others switched from errors to warnings:
+As we transition towards this stricter set of rules, O3's eslint config has been setup as a subset of the Airbnb rules, with some of the more strict rules turned off, and others switched from errors to warnings. Think of this config as Airbnb lite.
 
 - Turned off:
   - [eol-last](https://github.com/airbnb/javascript#whitespace--newline-at-end)
   - [func-names](http://eslint.org/docs/rules/func-names)
   - [guard-for-in](http://eslint.org/docs/rules/guard-for-in)
-  - [no-tabs](http://eslint.org/docs/rules/no-tabs)
 - Switched to warning:
   - [keyword-spacing](https://github.com/airbnb/javascript#whitespace--around-keywords)
   - [no-console](http://eslint.org/docs/rules/no-console)
-  - [no-restricted-syntax](https://github.com/airbnb/javascript#iterators--nope),
+  - [no-restricted-syntax](https://github.com/airbnb/javascript#iterators--nope)
 - Modified
   - [max-len](https://github.com/airbnb/javascript#whitespace--max-len) - allow longer lines for function params or angular module methods (.component, .service, etc)
   - [no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines) - modified to allow up to 4 empty lines
