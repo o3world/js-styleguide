@@ -15,7 +15,13 @@ module.exports = {
     "guard-for-in": "off",
     "keyword-spacing": "warn",
     "max-len": [
-      "error", {
+      "error", 100, 2, {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreUrls": true,
         "ignorePattern": "^\\s*(function|.factory|.service|.controller|.config|.run|.filter|.component|constructor)"
       }
     ],
