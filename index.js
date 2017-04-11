@@ -16,7 +16,7 @@ module.exports = {
     "keyword-spacing": "warn",
     "max-len": [
       "error", {
-        "ignorePattern": "^(function|.factory|.service|.controller|.config|.run|.filter|.component|constructor)"
+        "ignorePattern": "^\\s*(function|.factory|.service|.controller|.config|.run|.filter|.component|constructor)"
       }
     ],
     "no-console": "warn",
