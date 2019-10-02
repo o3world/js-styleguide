@@ -113,3 +113,10 @@ module.exports = {
 }
 ```
 [More detailed examples and documentation](https://github.com/MoOx/eslint-loader#eslint-loader-)
+
+
+### Commit conventions and publishing to NPM
+This project uses circle CI and [Semantic Release](https://github.com/semantic-release/) to auto tag releases, and publish new versions to NPM. Commits to master will automatically publish a new release. The version number will be determined by the structure of the message:
+1. git commit -m "fix(thing): fixing thing" = 1.0.0 -> 1.0.1
+2. git commit -m "feat(thing): adding thing" = 1.0.0 -> 1.1.0
+3. git commit -m "BREAKING CHANGE: totally breaking old versions" = 1.0.0 -> 2.0.0
