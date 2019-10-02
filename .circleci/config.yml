@@ -1,0 +1,24 @@
+# https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs
+version: 2.1
+jobs:
+  release:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run: npm install --save-dev semantic-release
+      - run: npm install @semantic-release/changelog -D
+      - run: npm install @semantic-release/npm -D
+      - run: npm install @semantic-release/git -D
+      # Run optional required steps before releasing
+      # - run: npm run build-script
+      - run: npx semantic-release
+workflows:
+  version: 2
+  release_to_npm:
+    jobs:
+      - release:
+          filters:
+            branches:
+              only:
+                - master
