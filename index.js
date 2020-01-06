@@ -1,5 +1,5 @@
 module.exports = {
-  "extends": "airbnb-base",
+  "extends": "airbnb",
   "env": {
     "browser": true,
     "jquery": true,
@@ -10,10 +10,16 @@ module.exports = {
     "angular": true
   },
   "rules": {
+    "arrow-parens": ["error", "as-needed", {
+      "requireForBlockBody": true
+    }],
     "eol-last": "off",
     "func-names": "off",
+    "function-paren-newline": "off",
     "guard-for-in": "off",
+    "implicit-arrow-linebreak": "off",
     "keyword-spacing": "warn",
+    "lines-between-class-members": "off",
     "max-len": [
       "error", 100, 2, {
         "ignoreUrls": true,
@@ -49,6 +55,22 @@ module.exports = {
         "classes": false
       }
     ],
-    "padded-blocks": "off"
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "padded-blocks": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-tag-spacing": {
+      "closingSlash": "never",
+      "beforeSelfClosing": "allow",
+      "afterOpening": "never",
+      "beforeClosing": "allow"
+    },
+    "react/jsx-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
+    "react/no-did-update-set-state": "off",
+    "react/sort-comp": "off",
+    "react/state-in-constructor": "off"
   }
 }
