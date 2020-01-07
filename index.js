@@ -60,12 +60,14 @@ module.exports = {
     "padded-blocks": "off",
     "react/destructuring-assignment": "off",
     "react/jsx-filename-extension": "off",
-    "react/jsx-tag-spacing": {
-      "closingSlash": "never",
-      "beforeSelfClosing": "allow",
-      "afterOpening": "never",
-      "beforeClosing": "allow"
-    },
+    "react/jsx-tag-spacing": [
+      "error", {
+        "closingSlash": "never",
+        "beforeSelfClosing": "allow",
+        "afterOpening": "never",
+        "beforeClosing": "allow"
+      }
+    ],
     "react/jsx-curly-newline": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-array-index-key": "off",
