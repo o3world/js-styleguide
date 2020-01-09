@@ -69,6 +69,8 @@ module.exports = {
       }
     ],
     "react/jsx-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-array-index-key": "off",
     "react/no-did-update-set-state": "off",
